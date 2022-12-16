@@ -40,9 +40,5 @@ export default function App() {
   if (!fontsLoaded) {
     return null;
   }
-  return (
-    <View onLayout={onLayoutRootView}>
-      <Home />
-    </View>
-  );
+  return <Home onLayout={onLayoutRootView} />;
 }

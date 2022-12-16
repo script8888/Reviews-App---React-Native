@@ -1,11 +1,10 @@
 import { StyleSheet, View, Text } from "react-native";
+import { globalStyles } from "../styles/global";
 
-import React from "react";
-
-function Home() {
+function Home({ onLayout }) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.titleText}>Home Screen</Text>
+    <View onLayout={onLayout} style={globalStyles.container}>
+      <Text style={globalStyles.titleText}>Home Screen</Text>
     </View>
   );
 }
@@ -16,7 +15,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontFamily: "nunito-bold",
-    fontSize: 18
+    fontSize: 18,
   },
 });
 
